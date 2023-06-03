@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_users",
+  "info": {
+    "singularName": "tenants-user",
+    "pluralName": "tenants-users",
+    "displayName": "tenants_user"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "login": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "password": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "changepassword": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "expire_date": {
+      "type": "date"
+    }
+  }
+}

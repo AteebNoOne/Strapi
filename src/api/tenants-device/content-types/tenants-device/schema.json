@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_devices",
+  "info": {
+    "singularName": "tenants-device",
+    "pluralName": "tenants-devices",
+    "displayName": "tenants_device",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "config": {
+      "type": "json",
+      "required": true
+    },
+    "macaddress": {
+      "type": "richtext",
+      "maxLength": 16,
+      "required": true
+    },
+    "serialnumber": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "global_model": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-model.global-model",
+      "inversedBy": "uuids"
+    },
+    "global_tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
+    }
+  }
+}

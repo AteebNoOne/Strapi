@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_user_groups",
+  "info": {
+    "singularName": "global-user-group",
+    "pluralName": "global-user-groups",
+    "displayName": "global_user_groups",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "features": {
+      "type": "json",
+      "required": false
+    }
+  }
+}

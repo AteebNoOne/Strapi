@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_events_types",
+  "info": {
+    "singularName": "global-events-type",
+    "pluralName": "global-events-types",
+    "displayName": "global_events_type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "idField": "uuid"
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "AC",
+        "AL",
+        "LG",
+        "LF",
+        "UU",
+        "CU",
+        "DU",
+        "TU"
+      ],
+      "required": true
+    }
+  }
+}

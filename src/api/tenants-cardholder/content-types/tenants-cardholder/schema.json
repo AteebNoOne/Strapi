@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_cardholders",
+  "info": {
+    "singularName": "tenants-cardholder",
+    "pluralName": "tenants-cardholders",
+    "displayName": "tenants_cardholders"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 45
+    },
+    "cardnumber": {
+      "type": "string",
+      "required": true,
+      "maxLength": 45
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "expireon": {
+      "type": "datetime",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 45
+    },
+    "email": {
+      "type": "email",
+      "maxLength": 45
+    },
+    "autogeneretedcard": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

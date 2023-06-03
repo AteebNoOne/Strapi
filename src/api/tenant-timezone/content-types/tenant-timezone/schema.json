@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenant_timezones",
+  "info": {
+    "singularName": "tenant-timezone",
+    "pluralName": "tenant-timezones",
+    "displayName": "tenant_timezone"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "schedule": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

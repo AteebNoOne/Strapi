@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_tenants",
+  "info": {
+    "singularName": "global-tenant",
+    "pluralName": "global-tenants",
+    "displayName": "global_tenants",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36,
+      "primary":true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 45
+    },
+    "resaler_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "licence": {
+      "type": "json"
+    },
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "company_name": {
+      "type": "string",
+      "maxLength": 45
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 45
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "address": {
+      "type": "richtext",
+      "maxLength": 100
+    },
+    "expire": {
+      "type": "date",
+      "default": "2023-06-01"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_usergroups",
+  "info": {
+    "singularName": "tenants-usergroup",
+    "pluralName": "tenants-usergroups",
+    "displayName": "tenants_usergroup"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 45
+    },
+    "features": {
+      "type": "json"
+    }
+  }
+}

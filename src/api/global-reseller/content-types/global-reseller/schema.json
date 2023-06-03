@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_resellers",
+  "info": {
+    "singularName": "global-reseller",
+    "pluralName": "global-resellers",
+    "displayName": "global_resellers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 45,
+      "required": true
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "maxLength": 45,
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "features": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

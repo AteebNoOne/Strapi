@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_models",
+  "info": {
+    "singularName": "global-model",
+    "pluralName": "global-models",
+    "displayName": "global_models",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "description": {
+      "type": "richtext",
+      "maxLength": 45
+    },
+    "features": {
+      "type": "json"
+    },
+    "uuids": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-device.tenants-device",
+      "inversedBy": "global_model"
+    }
+  }
+}

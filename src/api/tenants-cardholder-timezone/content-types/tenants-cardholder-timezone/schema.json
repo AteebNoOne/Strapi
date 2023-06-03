@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_cardholder_timezones",
+  "info": {
+    "singularName": "tenants-cardholder-timezone",
+    "pluralName": "tenants-cardholder-timezones",
+    "displayName": "tenants_cardholder_timezones"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_cardholder_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_timezone_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    }
+  }
+}

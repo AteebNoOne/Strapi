@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_devices_groups_devices",
+  "info": {
+    "singularName": "tenants-devices-groups-device",
+    "pluralName": "tenants-devices-groups-devices",
+    "displayName": "tenants_devices_groups_device"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "maxLength": 36,
+      "required": true
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenants_device_id": {
+      "type": "string",
+      "maxLength": 36,
+      "required": true
+    },
+    "tenants_devices_group_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    }
+  }
+}

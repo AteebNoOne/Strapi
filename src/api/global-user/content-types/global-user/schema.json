@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "global_users",
+  "info": {
+    "singularName": "global-user",
+    "pluralName": "global-users",
+    "displayName": "global_users"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "login": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "maxLength": 45,
+      "minLength": 1
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "reseller_id": {
+      "type": "string",
+      "maxLength": 36
+    }
+  }
+}

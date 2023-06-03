@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_users_and_groups",
+  "info": {
+    "singularName": "tenants-users-and-group",
+    "pluralName": "tenants-users-and-groups",
+    "displayName": "tenants_users_and_group"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_user_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_usergroup_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    }
+  }
+}

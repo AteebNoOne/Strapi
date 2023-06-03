@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants_events",
+  "info": {
+    "singularName": "tenants-event",
+    "pluralName": "tenants-events",
+    "displayName": "tenants_event"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 36
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "event_type": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_cardlholder_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "tenant_device_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 36
+    },
+    "info": {
+      "type": "json"
+    }
+  }
+}
