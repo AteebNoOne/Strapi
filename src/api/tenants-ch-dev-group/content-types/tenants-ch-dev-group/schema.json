@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "tenants_cardholders_dev_groups",
+  "collectionName": "tenants_ch_dev_groups",
   "info": {
-    "singularName": "tenants-cardholders-dev-group",
-    "pluralName": "tenants-cardholders-dev-groups",
-    "displayName": "Tenants_cardholders_dev_group",
+    "singularName": "tenants-ch-dev-group",
+    "pluralName": "tenants-ch-dev-groups",
+    "displayName": "Tenants_ch_dev_group",
     "description": ""
   },
   "options": {
@@ -21,10 +21,15 @@
       "relation": "oneToOne",
       "target": "api::global-tenant.global-tenant"
     },
-    "tenants_cardholder": {
+    "tenants_cardholder_id": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::tenants-cardholder.tenants-cardholder"
+    },
+    "tenants_devices_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-devices-group.tenants-devices-group"
     }
   }
 }
