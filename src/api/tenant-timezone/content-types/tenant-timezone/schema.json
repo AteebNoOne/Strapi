@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenant-timezone",
     "pluralName": "tenant-timezones",
-    "displayName": "tenant_timezone"
+    "displayName": "tenant_timezone",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,11 +17,6 @@
       "required": true,
       "maxLength": 36
     },
-    "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
     "name": {
       "type": "string",
       "required": true,
@@ -29,6 +25,11 @@
     "schedule": {
       "type": "json",
       "required": true
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

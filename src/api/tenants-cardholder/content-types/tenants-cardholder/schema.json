@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-cardholder",
     "pluralName": "tenants-cardholders",
-    "displayName": "tenants_cardholders"
+    "displayName": "tenants_cardholders",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,11 +14,6 @@
   "attributes": {
     "uuid": {
       "type": "uid",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_id": {
-      "type": "string",
       "required": true,
       "maxLength": 36
     },
@@ -51,6 +47,11 @@
     "autogeneretedcard": {
       "type": "boolean",
       "default": true
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

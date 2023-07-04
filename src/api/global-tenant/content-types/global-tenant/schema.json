@@ -16,17 +16,12 @@
       "type": "uid",
       "required": true,
       "maxLength": 36,
-      "primary":true
+      "primary": true
     },
     "name": {
       "type": "string",
       "required": true,
       "maxLength": 45
-    },
-    "resaler_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
     },
     "enabled": {
       "type": "boolean",
@@ -59,6 +54,11 @@
     "expire": {
       "type": "date",
       "default": "2023-06-01"
+    },
+    "reseller_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-reseller.global-reseller"
     }
   }
 }

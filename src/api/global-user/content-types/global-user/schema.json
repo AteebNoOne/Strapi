@@ -4,7 +4,8 @@
   "info": {
     "singularName": "global-user",
     "pluralName": "global-users",
-    "displayName": "global_users"
+    "displayName": "global_users",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -34,8 +35,9 @@
       "required": true
     },
     "reseller_id": {
-      "type": "string",
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-reseller.global-reseller"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "global-users-user-group",
     "pluralName": "global-users-user-groups",
-    "displayName": "global_users_user_groups"
+    "displayName": "global_users_user_groups",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,14 +18,14 @@
       "required": true
     },
     "global_user_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-user.global-user"
     },
     "global_user_group_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-user-group.global-user-group"
     }
   }
 }

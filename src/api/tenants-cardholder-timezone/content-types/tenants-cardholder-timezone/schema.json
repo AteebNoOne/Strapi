@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-cardholder-timezone",
     "pluralName": "tenants-cardholder-timezones",
-    "displayName": "tenants_cardholder_timezones"
+    "displayName": "tenants_cardholder_timezones",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,19 +18,19 @@
       "maxLength": 36
     },
     "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     },
     "tenant_cardholder_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-cardholder.tenants-cardholder"
     },
     "tenant_timezone_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant-timezone.tenant-timezone"
     }
   }
 }

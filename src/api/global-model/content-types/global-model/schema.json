@@ -23,12 +23,6 @@
     },
     "features": {
       "type": "json"
-    },
-    "uuids": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::tenants-device.tenants-device",
-      "inversedBy": "global_model"
     }
   }
 }

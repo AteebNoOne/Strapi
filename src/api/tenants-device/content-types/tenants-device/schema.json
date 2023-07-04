@@ -40,16 +40,15 @@
       "required": true,
       "maxLength": 45
     },
-    "global_model": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::global-model.global-model",
-      "inversedBy": "uuids"
-    },
     "global_tenant": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::global-tenant.global-tenant"
+    },
+    "global_model": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-model.global-model"
     }
   }
 }

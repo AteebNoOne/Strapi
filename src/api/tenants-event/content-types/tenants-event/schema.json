@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-event",
     "pluralName": "tenants-events",
-    "displayName": "tenants_event"
+    "displayName": "tenants_event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,28 +21,28 @@
       "type": "date",
       "required": true
     },
-    "event_type": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_cardlholder_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_device_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
     "info": {
       "type": "json"
+    },
+    "event_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-events-type.global-events-type"
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
+    },
+    "tenant_cardlholder_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-cardholder.tenants-cardholder"
+    },
+    "tenant_device_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-device.tenants-device"
     }
   }
 }

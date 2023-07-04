@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-cardholders-devices-group",
     "pluralName": "tenants-cardholders-devices-groups",
-    "displayName": "tenants_cardholders_devices_groups"
+    "displayName": "tenants_cardholders_devices_groups",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,19 +18,9 @@
       "maxLength": 36
     },
     "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenants_cardholder_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenants_devices_group_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-devices-group",
     "pluralName": "tenants-devices-groups",
-    "displayName": "tenants_devices_group"
+    "displayName": "tenants_devices_group",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,15 +17,15 @@
       "maxLength": 36,
       "required": true
     },
-    "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
     "name": {
       "type": "richtext",
       "required": true,
       "maxLength": 45
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

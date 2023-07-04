@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-users-and-group",
     "pluralName": "tenants-users-and-groups",
-    "displayName": "tenants_users_and_group"
+    "displayName": "tenants_users_and_group",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,20 +17,20 @@
       "required": true,
       "maxLength": 36
     },
-    "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_user_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
     "tenant_usergroup_id": {
       "type": "string",
       "required": true,
       "maxLength": 36
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
+    },
+    "tenant_user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-user.tenants-user"
     }
   }
 }
