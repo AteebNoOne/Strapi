@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-user",
     "pluralName": "tenants-users",
-    "displayName": "tenants_user"
+    "displayName": "tenants_user",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,11 +14,6 @@
   "attributes": {
     "uuid": {
       "type": "uid",
-      "required": true,
-      "maxLength": 36
-    },
-    "tenant_id": {
-      "type": "string",
       "required": true,
       "maxLength": 36
     },
@@ -43,6 +39,11 @@
     },
     "expire_date": {
       "type": "date"
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tenants-usergroup",
     "pluralName": "tenants-usergroups",
-    "displayName": "tenants_usergroup"
+    "displayName": "tenants_usergroup",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,11 +17,6 @@
       "required": true,
       "maxLength": 36
     },
-    "tenant_id": {
-      "type": "string",
-      "required": true,
-      "maxLength": 36
-    },
     "name": {
       "type": "richtext",
       "required": true,
@@ -28,6 +24,11 @@
     },
     "features": {
       "type": "json"
+    },
+    "tenant_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::global-tenant.global-tenant"
     }
   }
 }

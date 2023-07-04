@@ -1,20 +1,19 @@
 {
   "kind": "collectionType",
-  "collectionName": "tenants_devices_groups_devices",
+  "collectionName": "tenants_ds_gs_devices",
   "info": {
-    "singularName": "tenants-devices-groups-device",
-    "pluralName": "tenants-devices-groups-devices",
-    "displayName": "tenants_devices_groups_device",
+    "singularName": "tenants-ds-gs-device",
+    "pluralName": "tenants-ds-gs-devices",
+    "displayName": "Tenants_devices_groups_device",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "uuid": {
       "type": "uid",
-      "maxLength": 36,
       "required": true
     },
     "tenant_id": {
@@ -22,10 +21,15 @@
       "relation": "oneToOne",
       "target": "api::global-tenant.global-tenant"
     },
-    "tenants_device": {
+    "tenant_device_id": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::tenants-device.tenants-device"
+    },
+    "tenants_devices_group_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenants-devices-group.tenants-devices-group"
     }
   }
 }
