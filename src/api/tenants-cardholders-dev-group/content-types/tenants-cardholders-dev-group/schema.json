@@ -1,20 +1,19 @@
 {
   "kind": "collectionType",
-  "collectionName": "tenants_devices_groups_devices",
+  "collectionName": "tenants_cardholders_dev_groups",
   "info": {
-    "singularName": "tenants-devices-groups-device",
-    "pluralName": "tenants-devices-groups-devices",
-    "displayName": "tenants_devices_groups_device",
+    "singularName": "tenants-cardholders-dev-group",
+    "pluralName": "tenants-cardholders-dev-groups",
+    "displayName": "Tenants_cardholders_dev_group",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "uuid": {
       "type": "uid",
-      "maxLength": 36,
       "required": true
     },
     "tenant_id": {
@@ -22,10 +21,10 @@
       "relation": "oneToOne",
       "target": "api::global-tenant.global-tenant"
     },
-    "tenants_device": {
+    "tenants_cardholder": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::tenants-device.tenants-device"
+      "target": "api::tenants-cardholder.tenants-cardholder"
     }
   }
 }
